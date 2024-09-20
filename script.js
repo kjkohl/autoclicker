@@ -1,4 +1,3 @@
-
 let intervalId;
 let isClicking = false;
 
@@ -19,7 +18,7 @@ function startClicking() {
     document.getElementById('stopBtn').disabled = false;
 
     intervalId = setInterval(() => {
-        console.log('Clicking...'); // Here you'd want to add click simulation logic if running in an appropriate context
+        simulateClick();
     }, interval);
 }
 
@@ -29,4 +28,12 @@ function stopClicking() {
     document.getElementById('status').textContent = 'Status: Stopped';
     document.getElementById('startBtn').disabled = false;
     document.getElementById('stopBtn').disabled = true;
+}
+
+function simulateClick() {
+    const clickArea = document.getElementById('clickArea');
+    clickArea.style.backgroundColor = 'rgba(255, 0, 0, 0.7)'; // Change color briefly to indicate click
+    setTimeout(() => {
+        clickArea.style.backgroundColor = 'rgba(0, 123, 255, 0.7)';
+    }, 100);
 }
