@@ -11,11 +11,13 @@
         <h1>Auto Clicker</h1>
         <label for="interval">Click Interval (ms):</label>
         <input type="number" id="interval" value="1000" min="1">
-        <button id="startBtn">Start Clicking</button>
-        <button id="stopBtn" disabled>Stop Clicking</button>
+        <div class="buttons">
+            <button id="startBtn">Start Clicking</button>
+            <button id="stopBtn" disabled>Stop Clicking</button>
+        </div>
         <p id="status">Status: Stopped</p>
     </div>
+    <div class="click-area" id="clickArea">Click Here</div>
     <script src="script.js"></script>
 </body>
 </html>
-
